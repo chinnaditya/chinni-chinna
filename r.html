@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero{
+    background:linear-gradient(to right,#dbeafe,#eff6ff);
+    padding:100px 60px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+    color:#0f172a;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#475569;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+
+.about{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    padding:80px 60px;
+    flex-wrap:wrap;
+}
+
+.about img{
+    width:280px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about-text{
+    max-width:600px;
+}
+
+.about-text h2{
+    font-size:38px;
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+.about-text p{
+    font-size:18px;
+    color:#555;
+}
+
+/* ---------- SKILLS SECTION ---------- */
+
+.skills{
+    background:#e0f2fe;
+    padding:80px 60px;
+    text-align:center;
+}
+
+.skills h2{
+    font-size:38px;
+    margin-bottom:40px;
+    color:#0f172a;
+}
+
+.skill-boxes{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.skill{
+    background:white;
+    padding:25px 40px;
+    border-radius:12px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.skill:hover{
+    transform:translateY(-8px);
+}
+
+/* ---------- PROJECT SECTION ---------- */
+
+.projects{
+    padding:80px 60px;
+    text-align:center;
+}
+
+.projects h2{
+    font-size:38px;
+    margin-bottom:50px;
+    color:#0f172a;
+}
+
+.project-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.project-card{
+    background:white;
+    width:320px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project-content h3{
+    margin-bottom:10px;
+    color:#0284c7;
+}
+
+.project-content p{
+    color:#555;
+}
+
+/* ---------- RESUME SECTION ---------- */
+
+.resume{
+    background:#dbeafe;
+    text-align:center;
+    padding:80px 60px;
+}
+
+.resume h2{
+    font-size:38px;
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+.resume p{
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+.resume a{
+    display:inline-block;
+    background:#0ea5e9;
+    color:white;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.resume a:hover{
+    background:#0284c7;
+}
+
+/* ---------- CONTACT SECTION ---------- */
+
+.contact{
+    padding:80px 60px;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:38px;
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+.contact p{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .about{
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">MyPortfolio</div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <h1>Hello, I'm chinnaditya</h1>
+
+    <p>Web Developer | Frontend Designer | computer science engineering</p>
+
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section class="about">
+
+    <img <img src="https://i.ibb.co/b5WwJ8Cv/chinnaditya.png" alt="chinnaditya" border="0"></a>
+    <div class="about-text">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a passionate web developer and computer science engineering student.
+            I enjoy creating responsive and visually attractive websites
+            using HTML and CSS. I also work on software projects,
+            networking concepts, and frontend development.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- SKILLS SECTION -->
+
+<section class="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skill-boxes">
+
+        <div class="skill">HTML</div>
+
+        <div class="skill">CSS</div>
+
+        <div class="skill">JavaScript</div>
+
+        <div class="skill">Python</div>
+
+        <div class="skill">c</div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS SECTION -->
+
+<section class="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="project-container">
+
+        <div class="project-card">
+
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500">
+
+            <div class="project-content">
+
+                <h3>Landing Page</h3>
+
+                <p>
+                    Designed a responsive landing page using HTML and CSS
+                    with modern layouts and animations.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="project-card">
+
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500">
+
+            <div class="project-content">
+
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    Created a personal portfolio website to showcase
+                    projects, skills, and contact information.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="project-card">
+
+            <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=500">
+
+            <div class="project-content">
+
+                <h3>Cybersecurity Project</h3>
+
+                <p>
+                    Developed a cybersecurity project related to
+                    network spoofing detection and packet analysis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RESUME SECTION -->
+
+<section class="resume">
+
+    <h2>Resume</h2>
+
+    <p>Click below to download my resume.</p>
+
+    <a href="https://docs.google.com/document/d/1KLi0DfGvPa2eu3IEDb300JGTABDaFm9O/edit?usp=sharing&ouid=111139272672741961291&rtpof=true&sd=true" download>Download Resume</a>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>Email: chinna@example.com</p>
+
+    <p>Phone: +91 8309163544</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 chinnaditya | All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
